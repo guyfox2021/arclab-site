@@ -105,7 +105,7 @@
   ];
 
   /* ── Preload ───────────────────────────────────────────── */
-  ['assets/hero/hero-workspace.png', 'assets/hero/hero-code.png']
+  ['assets/hero/hero-workspace.png']
     .forEach(src => { const i = new Image(); i.src = src; });
 
   /* ══════════════════════════════════════════════════════
