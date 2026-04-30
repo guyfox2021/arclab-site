@@ -283,3 +283,83 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   gsap.globalTimeline.timeScale(100);
 }
+
+/* ============================================================
+   DECRYPT TEXT EFFECT — hover on buttons & nav links
+============================================================ */
+(function initDecryptEffect() {
+  const CHARS    = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*<>|_=+';
+  const SPEED    = 32; // ms per step
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const targets = document.querySelectorAll('.btn, .btn-telegram, .nav-link');
+
+  targets.forEach(el => {
+    // Find first non-empty text node (skips SVG children)
+    let textNode = null;
+    for (const node of el.childNodes) {
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.trim().length > 0) {
+        textNode = node;
+        break;
+      }
+    }
+    if (!textNode) return;
+
+    const original = textNode.textContent.trim();
+
+    // Replace raw text node with a span for safe manipulation
+    const span = document.createElement('span');
+    span.className = 'decrypt-text';
+    span.textContent = original;
+    textNode.replaceWith(span);
+
+    let intervalId = null;
+    let running    = false;
+
+    function randomChar() {
+      return CHARS[Math.floor(Math.random() * CHARS.length)];
+    }
+
+    function scramble(revealedCount) {
+      return original
+        .split('')
+        .map((char, i) => {
+          if (char === ' ') return ' ';
+          if (i < revealedCount) return original[i];
+          return randomChar();
+        })
+        .join('');
+    }
+
+    function startDecrypt() {
+      if (running || prefersReduced) return;
+      clearInterval(intervalId);
+      running = true;
+      let revealed = 0;
+
+      span.textContent = scramble(0); // instant scramble on enter
+
+      intervalId = setInterval(() => {
+        revealed++;
+        span.textContent = scramble(revealed);
+
+        if (revealed >= original.length) {
+          clearInterval(intervalId);
+          span.textContent = original;
+          running = false;
+        }
+      }, SPEED);
+    }
+
+    function reset() {
+      clearInterval(intervalId);
+      running = false;
+      span.textContent = original;
+    }
+
+    el.addEventListener('mouseenter', startDecrypt);
+    el.addEventListener('mouseleave', reset);
+    el.addEventListener('focus',      startDecrypt);
+    el.addEventListener('blur',       reset);
+  });
+})();
