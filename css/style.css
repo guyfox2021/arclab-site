@@ -1057,19 +1057,20 @@ ul  { list-style: none; }
 ============================================================ */
 .code-overlay {
   position: absolute;
-  right: 5vw;
-  top: 6vh;
-  width: 48%;
-  max-height: 88vh;
+  left: 38%;
+  right: auto;
+  top: 5vh;
+  width: 54%;
+  max-height: 90vh;
   overflow: hidden;
   pointer-events: none;
   z-index: 2;
   transform:
     perspective(1200px)
-    rotateX(8deg)
-    rotateY(-18deg)
-    rotateZ(-12deg)
-    skewX(-5deg);
+    rotateX(5deg)
+    rotateY(16deg)
+    rotateZ(13deg)
+    skewX(4deg);
   transform-origin: top left;
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
   font-size: clamp(9px, 0.78vw, 12.5px);
@@ -1122,7 +1123,7 @@ ul  { list-style: none; }
 }
 
 @media (max-width: 1200px) {
-  .code-overlay { font-size: clamp(8px, 0.68vw, 10.5px); width: 52%; right: 3vw; }
+  .code-overlay { font-size: clamp(8px, 0.68vw, 10.5px); width: 56%; left: 32%; }
 }
 @media (max-width: 960px) {
   .code-overlay { display: none; }
