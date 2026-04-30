@@ -7,7 +7,7 @@
   <meta name="description" content="Telegram-боти, сучасні сайти, автоматизація процесів та AI-інтеграції під ключ." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -145,16 +145,29 @@
         </div>
       </div>
 
-      <!-- Right visual -->
-      <div class="hero__visual">
+      <!-- Right visual — scene system -->
+      <div class="hero__visual" id="heroVisual">
+
+        <!-- Scene A: Workspace -->
+        <div class="hero-scene scene-a is-active" id="sceneA" aria-hidden="true">
+          <img src="assets/hero/hero-workspace.png" id="imgWorkspace" class="scene-img" alt="" />
+        </div>
+
+        <!-- Scene B: Code environment -->
+        <div class="hero-scene scene-b" id="sceneB" aria-hidden="true">
+          <img src="assets/hero/hero-code.png" id="imgCode" class="scene-img scene-img--code" alt="" />
+          <div class="code-overlay" id="codeOverlay" aria-hidden="true">
+            <div class="code-lines" id="codeLines"></div><span class="code-caret" id="codeCaret">▋</span>
+          </div>
+        </div>
+
+        <!-- Glitch canvas (drawn per-frame during transitions) -->
+        <canvas class="glitch-canvas" id="glitchCanvas" aria-hidden="true"></canvas>
+
+        <!-- Gradient fades — always on top -->
         <div class="hero__visual-fade-top" aria-hidden="true"></div>
         <div class="hero__visual-fade-left" aria-hidden="true"></div>
         <div class="hero__visual-fade-bottom" aria-hidden="true"></div>
-        <img
-          src="assets/hero/hero-workspace.png"
-          alt="ArcLab digital workspace — code on screens"
-          class="hero__image"
-        />
       </div>
     </div>
 
@@ -463,5 +476,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/hero-scene.js"></script>
 </body>
 </html>
