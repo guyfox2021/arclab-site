@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArcLab — Digital Solutions Studio</title>
+  <meta name="description" content="Telegram-боти, сучасні сайти, автоматизація процесів та AI-інтеграції під ключ." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="header__inner container">
+      <a href="/" class="header__logo">
+        <img src="assets/logo/logo.png" alt="ArcLab" class="header__logo-img" />
+        <span class="header__logo-name">ArcLab</span>
+      </a>
+
+      <nav class="header__nav" aria-label="Основна навігація">
+        <a href="#services" class="nav-link">Послуги</a>
+        <a href="#portfolio" class="nav-link">Портфоліо</a>
+        <a href="#pricing" class="nav-link">Ціни</a>
+        <a href="#about" class="nav-link">Про нас</a>
+        <a href="#contact" class="nav-link">Контакти</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="tel:+380991234567" class="header__phone">
+          <svg class="header__phone-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          +38 (099) 123 45 67
+        </a>
+        <a href="https://t.me/ArcLab_inc" class="btn-telegram" target="_blank" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Telegram
+        </a>
+      </div>
+
+      <!-- Mobile burger -->
+      <button class="header__burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="header__line"></div>
+
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="#services" class="mobile-nav__link">Послуги</a>
+      <a href="#portfolio" class="mobile-nav__link">Портфоліо</a>
+      <a href="#pricing" class="mobile-nav__link">Ціни</a>
+      <a href="#about" class="mobile-nav__link">Про нас</a>
+      <a href="#contact" class="mobile-nav__link">Контакти</a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="home">
+    <div class="hero__inner">
+
+      <!-- Left content -->
+      <div class="hero__left">
+        <p class="hero__eyebrow">
+          <span class="eyebrow-bracket" aria-hidden="true"></span>
+          DIGITAL SOLUTIONS STUDIO
+        </p>
+
+        <h1 class="hero__heading">
+          <span class="heading-highlight">Створюємо</span><br>
+          цифрові рішення<br>
+          для бізнесу
+        </h1>
+
+        <p class="hero__subtitle">
+          Telegram-боти, сучасні сайти,<br>
+          автоматизація процесів<br>
+          та AI&#8209;інтеграції під ключ.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#contact" class="btn btn--primary">
+            Обговорити проект
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#portfolio" class="btn btn--secondary">
+            Портфоліо
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <div class="stat__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="stat__info">
+              <strong>10+ проектів</strong>
+              <span>успішно реалізовано</span>
+            </div>
+          </div>
+
+          <div class="stat__sep" aria-hidden="true"></div>
+
+          <div class="stat">
+            <div class="stat__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="stat__info">
+              <strong>24/7 підтримка</strong>
+              <span>ми завжди на зв'язку</span>
+            </div>
+          </div>
+
+          <div class="stat__sep" aria-hidden="true"></div>
+
+          <div class="stat">
+            <div class="stat__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4.5 16.5L3 21l4.5-1.5L21 6a2.12 2.12 0 00-3-3L4.5 16.5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 5l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="stat__info">
+              <strong>Швидкий старт</strong>
+              <span>від ідеї до результату</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right visual -->
+      <div class="hero__visual">
+        <div class="hero__visual-fade-top" aria-hidden="true"></div>
+        <div class="hero__visual-fade-left" aria-hidden="true"></div>
+        <div class="hero__visual-fade-bottom" aria-hidden="true"></div>
+        <img
+          src="assets/hero/hero-workspace.png"
+          alt="ArcLab digital workspace — code on screens"
+          class="hero__image"
+        />
+      </div>
+    </div>
+
+    <!-- Pagination dots -->
+    <div class="hero__dots" aria-hidden="true">
+      <span class="hero-dot hero-dot--active"></span>
+      <span class="hero-dot"></span>
+      <span class="hero-dot"></span>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="hero__bottom">
+      <p class="hero__tagline">BUILDING THE FUTURE<br>WITH CODE AND DESIGN&nbsp;.&nbsp;.</p>
+      <a href="#services" class="hero__scroll" aria-label="Дізнатися більше">
+        <span>ДІЗНАТИСЯ БІЛЬШЕ</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <div class="hero__orbit" aria-hidden="true">
+        <div class="hero__orbit-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES ==================== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">ЩО МИ РОБИМО</p>
+        <h2 class="section-title">Наші послуги</h2>
+        <p class="section-desc">Комплексні цифрові рішення для вашого бізнесу — від ідеї до запуску.</p>
+      </div>
+
+      <div class="services__grid">
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Telegram-боти</h3>
+          <p>Автоматизація продажів, підтримки клієнтів та внутрішніх процесів через потужні Telegram-боти.</p>
+          <span class="service-card__arrow" aria-hidden="true">→</span>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M3 9h18M9 21V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Веб-розробка</h3>
+          <p>Сучасні лендинги, корпоративні сайти та веб-застосунки з фокусом на конверсію та UX.</p>
+          <span class="service-card__arrow" aria-hidden="true">→</span>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>AI-інтеграції</h3>
+          <p>Впровадження штучного інтелекту: чат-боти на GPT, автоматизована аналітика, генерація контенту.</p>
+          <span class="service-card__arrow" aria-hidden="true">→</span>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 20V10M18 20V4M6 20v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Автоматизація</h3>
+          <p>Оптимізація бізнес-процесів через автоматизацію рутинних задач та інтеграцію систем.</p>
+          <span class="service-card__arrow" aria-hidden="true">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO ==================== -->
+  <section class="portfolio section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">НАШІ РОБОТИ</p>
+        <h2 class="section-title">Портфоліо</h2>
+        <p class="section-desc">Проєкти, що говорять самі за себе.</p>
+      </div>
+
+      <div class="portfolio__grid">
+        <div class="portfolio-card reveal">
+          <div class="portfolio-card__img-wrap">
+            <img src="assets/hero/hero-code.png" alt="Бот для eCommerce" loading="lazy" />
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__cta">Переглянути →</span>
+            </div>
+          </div>
+          <div class="portfolio-card__info">
+            <span class="portfolio-card__tag">Telegram-бот</span>
+            <h3>Бот для eCommerce</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-card__img-wrap">
+            <img src="assets/hero/hero-portfolio.png" alt="Корпоративний сайт" loading="lazy" />
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__cta">Переглянути →</span>
+            </div>
+          </div>
+          <div class="portfolio-card__info">
+            <span class="portfolio-card__tag">Веб-розробка</span>
+            <h3>Корпоративний сайт</h3>
+          </div>
+        </div>
+
+        <div class="portfolio-card reveal">
+          <div class="portfolio-card__img-wrap">
+            <img src="assets/hero/hero-workspace.png" alt="AI-асистент для бізнесу" loading="lazy" />
+            <div class="portfolio-card__overlay">
+              <span class="portfolio-card__cta">Переглянути →</span>
+            </div>
+          </div>
+          <div class="portfolio-card__info">
+            <span class="portfolio-card__tag">AI-інтеграція</span>
+            <h3>AI-асистент для бізнесу</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING ==================== -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">ТАРИФИ</p>
+        <h2 class="section-title">Прозорі ціни</h2>
+        <p class="section-desc">Без прихованих платежів. Платите за результат.</p>
+      </div>
+
+      <div class="pricing__grid">
+        <div class="pricing-card reveal">
+          <p class="pricing-card__name">Старт</p>
+          <div class="pricing-card__price">
+            від <strong>15 000</strong> <span>₴</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Лендинг або простий сайт</li>
+            <li>Базовий Telegram-бот</li>
+            <li>1 місяць підтримки</li>
+            <li>Базова аналітика</li>
+          </ul>
+          <a href="#contact" class="btn btn--secondary btn--full">Замовити</a>
+        </div>
+
+        <div class="pricing-card pricing-card--featured reveal">
+          <p class="pricing-card__badge">Популярне</p>
+          <p class="pricing-card__name">Бізнес</p>
+          <div class="pricing-card__price">
+            від <strong>35 000</strong> <span>₴</span>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Повноцінний сайт або застосунок</li>
+            <li>Telegram-бот з CRM-інтеграцією</li>
+            <li>3 місяці підтримки</li>
+            <li>Розширена аналітика</li>
+            <li>AI-функціональність</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary btn--full">Замовити</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <p class="pricing-card__name">Преміум</p>
+          <div class="pricing-card__price pricing-card__price--custom">
+            <strong>Індивідуально</strong>
+          </div>
+          <ul class="pricing-card__features">
+            <li>Будь-який масштаб проєкту</li>
+            <li>Повна автоматизація процесів</li>
+            <li>6+ місяців підтримки</li>
+            <li>Виділена команда розробки</li>
+            <li>SLA-гарантії</li>
+            <li>Пріоритетна підтримка</li>
+          </ul>
+          <a href="#contact" class="btn btn--secondary btn--full">Обговорити</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__inner">
+        <div class="about__left reveal">
+          <p class="section-eyebrow" style="text-align:left">ПРО НАС</p>
+          <h2 class="section-title" style="text-align:left">Хто ми такі</h2>
+          <p class="about__text">ArcLab — команда розробників та дизайнерів, що спеціалізується на створенні цифрових продуктів для бізнесу. Ми будуємо рішення, що працюють — від автоматизації рутини до повноцінних digital-екосистем.</p>
+          <p class="about__text">Кожен проєкт — це партнерство. Ми занурюємось у ваш бізнес, розуміємо потреби та пропонуємо рішення з реальною цінністю.</p>
+          <div class="about__stats">
+            <div class="about-stat">
+              <strong>10+</strong>
+              <span>реалізованих проєктів</span>
+            </div>
+            <div class="about-stat">
+              <strong>3+</strong>
+              <span>роки досвіду</span>
+            </div>
+            <div class="about-stat">
+              <strong>24/7</strong>
+              <span>підтримка клієнтів</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__right reveal">
+          <img src="assets/hero/hero-code.png" alt="Команда ArcLab за роботою" class="about__img" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">ЗВ'ЯЖІТЬСЯ З НАМИ</p>
+        <h2 class="section-title">Почнемо проєкт?</h2>
+        <p class="section-desc">Опишіть вашу задачу — ми відповімо протягом 24 годин.</p>
+      </div>
+
+      <div class="contact__inner">
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Ваше ім'я" required class="form-input" autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email" required class="form-input" autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <textarea name="message" placeholder="Розкажіть про ваш проєкт" rows="5" class="form-input form-textarea"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">
+            Відправити повідомлення
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </form>
+
+        <div class="contact__info reveal">
+          <div class="contact-info-item">
+            <span class="contact-info-label">Telegram</span>
+            <a href="https://t.me/ArcLab_inc" target="_blank" rel="noopener">@ArcLab_inc</a>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-label">Телефон</span>
+            <a href="tel:+380991234567">+38 (099) 123 45 67</a>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-label">Email</span>
+            <a href="mailto:hello@arclab.studio">hello@arclab.studio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo">
+            <img src="assets/logo/logo.png" alt="ArcLab" />
+            <span>ArcLab</span>
+          </a>
+          <p>Digital Solutions Studio</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Навігація у підвалі">
+          <a href="#services">Послуги</a>
+          <a href="#portfolio">Портфоліо</a>
+          <a href="#pricing">Ціни</a>
+          <a href="#about">Про нас</a>
+          <a href="#contact">Контакти</a>
+        </nav>
+
+        <div class="footer__social">
+          <a href="https://t.me/ArcLab_inc" target="_blank" rel="noopener">Telegram →</a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2025 ArcLab. Всі права захищені.</p>
+        <p>BUILDING THE FUTURE WITH CODE AND DESIGN</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
