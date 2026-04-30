@@ -1057,20 +1057,20 @@ ul  { list-style: none; }
 ============================================================ */
 .code-overlay {
   position: absolute;
-  left: 38%;
+  left: 36%;
   right: auto;
-  top: 5vh;
-  width: 54%;
+  top: 4vh;
+  width: 56%;
   max-height: 90vh;
   overflow: hidden;
   pointer-events: none;
   z-index: 2;
   transform:
     perspective(1200px)
-    rotateX(5deg)
-    rotateY(16deg)
-    rotateZ(13deg)
-    skewX(4deg);
+    rotateX(10deg)
+    rotateY(-22deg)
+    rotateZ(-15deg)
+    skewX(-5deg);
   transform-origin: top left;
   font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
   font-size: clamp(9px, 0.78vw, 12.5px);
