@@ -1054,52 +1054,73 @@ ul  { list-style: none; }
 ============================================================ */
 .code-overlay {
   position: absolute;
-  left: 46%;
-  top: 7%;
-  width: 44%;
-  height: 80%;
+  right: 5vw;
+  top: 6vh;
+  width: 48%;
+  max-height: 88vh;
   overflow: hidden;
   pointer-events: none;
   z-index: 2;
   transform:
-    perspective(900px)
-    rotateX(2deg)
-    rotateY(-10deg)
-    rotateZ(-7deg)
-    skewX(-3deg);
+    perspective(1200px)
+    rotateX(8deg)
+    rotateY(-18deg)
+    rotateZ(-12deg)
+    skewX(-5deg);
   transform-origin: top left;
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
-  font-size: clamp(9px, 0.82vw, 13px);
-  line-height: 1.55;
-  color: rgba(255,255,255,0.78);
-  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
-  mask-image:         linear-gradient(to bottom, black 55%, transparent 100%);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: clamp(9px, 0.78vw, 12.5px);
+  line-height: 1.6;
+  color: #e6e6e6;
+  -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+  mask-image:         linear-gradient(to bottom, black 65%, transparent 100%);
 }
 
-.code-lines {
+.code-lines { display: block; }
+
+.code-line {
   display: block;
   white-space: pre;
+  display: flex;
+  align-items: baseline;
+  gap: 0;
 }
-.code-line { display: block; }
 
-/* Syntax colours — monochrome palette */
-.ck  { color: rgba(185,190,200,0.90); } /* keywords */
-.cs  { color: rgba(148,148,148,0.85); } /* strings */
-.cf  { color: rgba(238,238,238,0.96); } /* functions */
-.cc  { color: rgba(100,100,100,0.72); } /* comments */
+.code-ln {
+  display: inline-block;
+  min-width: 2.8ch;
+  padding-right: 1.4ch;
+  color: rgba(255,255,255,0.2);
+  text-align: right;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.code-body { display: inline; }
+
+/* VS Code / JetBrains syntax palette */
+.ck { color: #c792ea; }   /* keywords: from import def async await if elif return */
+.cm { color: #8abaf8; }   /* modules / imports */
+.cf { color: #82aaff; }   /* functions & variables */
+.cs { color: #c3e88d; }   /* strings */
+.cn { color: #f78c6c; }   /* numbers / constants */
+.cc { color: #5c6370; }   /* comments */
+.cp { color: #e5e8e5; }   /* punctuation / brackets */
 
 /* Blinking caret */
 .code-caret {
   display: inline;
-  color: rgba(255,255,255,0.82);
-  animation: caret-blink 0.85s step-end infinite;
+  color: #e6e6e6;
+  animation: caret-blink 0.9s step-end infinite;
 }
 @keyframes caret-blink {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0; }
 }
 
-/* Tablet: shrink overlay */
-@media (max-width: 1100px) {
-  .code-overlay { font-size: clamp(8px, 0.7vw, 11px); }
+@media (max-width: 1200px) {
+  .code-overlay { font-size: clamp(8px, 0.68vw, 10.5px); width: 52%; right: 3vw; }
+}
+@media (max-width: 960px) {
+  .code-overlay { display: none; }
 }
