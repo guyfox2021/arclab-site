@@ -494,13 +494,15 @@ ul  { list-style: none; }
 .hero__bottom {
   position: relative;
   z-index: 2;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   padding: 20px var(--pad-x);
   border-top: 1px solid var(--border);
   opacity: 0;
 }
+
+.hero__orbit { justify-self: end; }
 
 .hero__tagline {
   font-size: 0.59375rem;
